@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import FlightSearch from "../src/components/FlightSearch/FlightSearch";
+import FlightSelection, { Flight, FlightSelectionProps } from "./components/FlightSelection/FlightSelection";
 
-function App() {
+const App: React.FC = () => {
+  const flights: Flight[] = [
+    {
+      id: '1',
+      departure: 'Paris',
+      departureTime: '9:00',
+      arrival: 'London',
+      arrivalTime: '10:00',
+      price: 100,
+    },
+    {
+      id: '2',
+      departure: 'Paris',
+      departureTime: '15:00',
+      arrival: 'London',
+      arrivalTime: '16:00',
+      price: 150,
+    },
+    {
+      id: '3',
+      departure: 'London',
+      departureTime: '12:00',
+      arrival: 'Paris',
+      arrivalTime: '13:00',
+      price: 120,
+    },
+    {
+      id: '4',
+      departure: 'London',
+      departureTime: '18:00',
+      arrival: 'Paris',
+      arrivalTime: '19:00',
+      price: 180,
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: "40px" }}>
+      <FlightSearch />
+      <FlightSelection flights={flights} />
     </div>
   );
-}
+};
 
 export default App;
