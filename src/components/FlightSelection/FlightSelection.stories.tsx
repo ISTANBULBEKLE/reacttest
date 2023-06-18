@@ -2,7 +2,7 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import FlightSelection, { Flight, FlightSelectionProps } from './FlightSelection';
 
-export default { title: 'FlightSelection', component: FlightSelection, } as Meta;
+export default { title: 'Components/FlightSelection', component: FlightSelection, } as Meta;
 
 const Template: Story = (args) => <FlightSelection flights={[]} {...args} />;
 

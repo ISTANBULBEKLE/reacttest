@@ -10,12 +10,16 @@ import './FlightSearch.css';
 const FlightSearch: React.FC = (): JSX.Element => {
   const [startDate, setStartDate] = useState<Date | null>(null);
   const [endDate, setEndDate] = useState<Date | null>(null);
+  const [departingAirport, setDepartingAirport] = useState<string>('');
+  const [returningAirport, setReturningAirport] = useState<string>('');
 
   /**
    * Handle search button click event
    * @returns void
    */
   const handleSearch = (): void => {
+    console.log('Departing Airport:', departingAirport);
+    console.log('Returning Airport:', returningAirport);
     console.log('Start Date:', startDate);
     console.log('End Date:', endDate);
   };
@@ -24,6 +28,26 @@ const FlightSearch: React.FC = (): JSX.Element => {
     <div className="flight-search-card">
       <h1 className="flight-search__title">Flights Search</h1>
       <div className="flight-search__form">
+        <div className="flight-search__input">
+          <label htmlFor="departing-airport">Departing Airport</label>
+          <input
+            id="departing-airport"
+            value={departingAirport}
+            onChange={(e) => setDepartingAirport(e.target.value)}
+            className="flight-search__airport-input"
+            placeholder="Enter departing airport"
+          />
+        </div>
+        <div className="flight-search__input">
+          <label htmlFor="returning-airport">Returning Airport</label>
+          <input
+            id="returning-airport"
+            value={returningAirport}
+            onChange={(e) => setReturningAirport(e.target.value)}
+            className="flight-search__airport-input"
+            placeholder="Enter returning airport"
+          />
+        </div>
         <div className="flight-search__input">
           <label htmlFor="start-date">Departure Date</label>
           <DatePicker
@@ -55,4 +79,3 @@ const FlightSearch: React.FC = (): JSX.Element => {
 };
 
 export default FlightSearch;
-
