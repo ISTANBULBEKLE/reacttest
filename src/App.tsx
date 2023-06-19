@@ -1,8 +1,17 @@
 import React from "react";
-import FlightSearch from "../src/components/FlightSearch/FlightSearch";
+import FlightSearch, { FlightSearchParams } from "./components/FlightSearch/FlightSearch";
 import FlightSelection, { Flight, FlightSelectionProps } from "./components/FlightSelection/FlightSelection";
+import FlightBook from "./components/FlightBook/FlightBook";
 
 const App: React.FC = () => {
+  /**
+    * Handle search flights event
+    * @param searchParams - Search params object
+    */
+  const handleSearchFlights = (searchParams: FlightSearchParams): void => {
+    // Implement flight search logic here
+  };
+
   const flights: Flight[] = [
     {
       id: '1',
@@ -40,8 +49,9 @@ const App: React.FC = () => {
 
   return (
     <div style={{ padding: "40px" }}>
-      <FlightSearch />
+      <FlightSearch onSearch={handleSearchFlights} />
       <FlightSelection flights={flights} />
+      <FlightBook />
     </div>
   );
 };

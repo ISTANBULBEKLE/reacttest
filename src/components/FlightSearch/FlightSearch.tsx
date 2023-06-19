@@ -7,11 +7,42 @@ import './FlightSearch.css';
  * Flight search component
  * @returns A React functional component
  */
-const FlightSearch: React.FC = (): JSX.Element => {
-  const [startDate, setStartDate] = useState<Date | null>(null);
-  const [endDate, setEndDate] = useState<Date | null>(null);
-  const [departingAirport, setDepartingAirport] = useState<string>('');
-  const [returningAirport, setReturningAirport] = useState<string>('');
+
+interface Flight {
+  id: string;
+  departure: string;
+  departureTime: string;
+  arrival: string;
+  arrivalTime: string;
+  price: number;
+}
+
+export interface FlightSearchProps {
+  onSearch: (searchParams: FlightSearchParams) => void;
+  startDate?: Date;
+  endDate?: Date;
+  departingAirport?: string;
+  returningAirport?: string;
+}
+
+export interface FlightSearchParams {
+  startDate?: Date;
+  endDate?: Date;
+  departingAirport?: string;
+  returningAirport?: string;
+}
+
+const FlightSearch: React.FC<FlightSearchProps> = ({
+  startDate: initialStartDate,
+  endDate: initialEndDate,
+  departingAirport: initialDepartingAirport,
+  returningAirport: initialReturningAirport,
+  onSearch }): JSX.Element => {
+  const [departingAirport, setDepartingAirport] = useState<string>(initialDepartingAirport || '');
+  const [returningAirport, setReturningAirport] = useState<string>(initialReturningAirport || '');
+
+  const [startDate, setStartDate] = useState<Date | null>(initialStartDate || null);
+  const [endDate, setEndDate] = useState<Date | null>(initialEndDate || null);
 
   /**
    * Handle search button click event
@@ -77,5 +108,6 @@ const FlightSearch: React.FC = (): JSX.Element => {
     </div>
   );
 };
+
 
 export default FlightSearch;

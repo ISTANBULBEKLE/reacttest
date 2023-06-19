@@ -50,7 +50,7 @@
 }
 
 .flight-selection__flight-select {
-   background-color: #0077ff;
+   background-color: #e26b00;
    color: #fff;
    border: none;
    border-radius: 0.25rem;
@@ -60,5 +60,5 @@
 }
 
 .flight-selection__flight-select:hover {
-   background-color: #005ae6;
+   background-color: #e26b00;
 }

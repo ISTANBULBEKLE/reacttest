@@ -1,0 +1,200 @@
+.flight-book-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .flight-book-header {
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .flight-book-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .flight-book-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .flight-book-card {
+    width: calc(50% - 1rem);
+    margin-bottom: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .flight-book-card__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #f6f6f6;
+  }
+  
+  .flight-book-card__header h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .flight-book-price-tag {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6d00;
+  }
+  
+  .flight-book-card__body {
+    padding: 1rem;
+  }
+  
+  .flight-book-card__times {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .flight-book-card__time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .flight-book-card__time span {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .flight-book-card__plus-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #ff6d00;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .flight-book-card__plus-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .flight-book-datepicker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    background-color: #f6f6f6;
+  }
+  
+  .flight-book-datepicker__label {
+    margin-right: 2rem;
+  }
+  
+  .flight-book-datepicker__input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .flight-book-datepicker__airport-input {
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .flight-book-datepicker__datepicker {
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .flight-book-datepicker__button {
+    cursor: pointer;
+    background-color: #f48024;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 0.3rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+.flight-book-datepicker__button:hover { 
+    background-color: #e26b00;
+}
+
+.flight-book-label { 
+    font-size: 16px; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+}
+
+.flight-book-input { 
+    width: 100%; 
+    height: 40px; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    margin-bottom: 10px; }
+
+.flight-book-select { 
+    width: 100%; 
+    height: 40px;
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    margin-bottom: 10px; 
+    appearance: none; 
+    background: url('data:image/svg+xml;utf8,') no-repeat right #fff; 
+    background-size: 20px; 
+}
+
+.flight-book-select::-ms-expand { 
+    display: none; 
+}
+
+.flight-book-select option { 
+    font-size: 16px; 
+}
+
+.flight-book-submit {
+     width: 100%; 
+     height: 40px; 
+     border: none; 
+     border-radius: 5px; 
+     background-color: #0077c2; 
+     color: #fff; 
+     font-size: 16px; 
+     font-weight: bold; 
+     cursor: pointer; 
+     transition: background-color 0.2s ease-in-out;
+}
+
+.flight-book-submit:hover { 
+    background-color: #005fa3; 
+}
+
+.flight-book-error { 
+    color: red; 
+    margin-top: 5px; 
+    font-size: 14px; 
+}
+
